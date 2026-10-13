@@ -1,7 +1,5 @@
 # CSE 134 HW 2
 
-## Name
-Christine Le
+## Name - Christine Le
 
-## PID
-A17810144
+## PID - A17810144
