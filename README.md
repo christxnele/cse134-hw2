@@ -1,26 +1,7 @@
-## Names of all members in our team
-- Victoria Timofeev
-- Christine Le
-- Ryan Soe
+# CSE 134 HW 2
 
-## The password for user "grader" on your Apache server 
+## Name
+Christine Le
 
-ssh grader@146.190.150.30
-password: CSE135rocks
-
-
-
-
-## Link to our site:
-https://cse135vrc.site
-
-
-## Username/password info for logging into the site
-
-Username: grader  
-Password: ilovecse135
-
-
-## Summary of changes made to collector.ks
-
-# cse134-hw2
+## PID
+A17810144
