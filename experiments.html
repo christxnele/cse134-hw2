@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
- <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -28,7 +28,7 @@
       }
     </style>
   </head>
-<body>
+  <body>
     <header>
       <a href="index.html">Christine Le</a>
       <nav>
@@ -49,84 +49,121 @@
       </nav>
     </header>
     <main>
-        <h1>Experiment Tags</h1>
-        <section>
-            <h2>Template</h2>
-            <p>
-                This template holds a blank project card, the same layout used
-                on the projects page
+      <h1>Experiment Tags</h1>
+      <section>
+        <h2>Template</h2>
+        <p>
+          This template holds a blank project card, the same layout used on the
+          projects page
+        </p>
+        <template id="project-card-template">
+          <article class="proj-card">
+            <picture>
+              <source srcset="media/placeholder-image.webp" type="image/webp" />
+              <img
+                src="media/placeholder-image.jpg"
+                alt=""
+                width="75"
+                height="75"
+              />
+            </picture>
+            <p class="proj-meta-line">
+              <span>(00)</span>
+              <span>Context · <time datetime="2026-01">Date</time></span>
             </p>
-            <template id="project-card-template">
-                <article class="proj-card">
-                    <picture>
-                        <source srcset="media/placeholder-image.webp" type="image/webp" />
-                        <img
-                            src="media/placeholder-image.jpg"
-                            alt=""
-                            width="75"
-                            height="75"
-                        />
-                    </picture>
-                    <p class="proj-meta-line">
-                        <span>(00)</span>
-                        <span>Context · <time datetime="2026-01">Date</time></span>
-                    </p>
-                    <h2>Project name</h2>
-                    <p class="proj-desc">Project description</p>
-                    <ul class="proj-tags">
-                        <li><tool-tag>tag</tool-tag></li>
-                    </ul>
-                    <p class="proj-view-link">
-                        <a href="projects.html">View project <span aria-hidden="true">&rarr;</span></a>
-                    </p>
-                </article>
-            </template>
-        </section>
-        <section>
-            <h2>Audio + Source</h2>
-            <p>This audio plays the sounds of ice being stepped on</p>
-            <audio controls>
-                <source src="media/ice-sound.mp3" type="audio/mpeg">  Your browser does not support audio
-            </audio>
-            
-        </section>
-        <section>
-            <h2>Video + Source</h2>
-            <p>This plays an asmr wax cracking video</p>
-            <video height="500" width="300" controls>
-                <source src="media/wax-cracking-video.mp4"  type="video/mp4">  Your browser does not support video
-            </video>
-        </section>
-        <section>
-            <h2>Canvas</h2>
-            <p>simple drawing made w/ canvas API</p>
-            <canvas id="demo-canvas" width="300" height="150" role="img">Your Browser doesn't support canvas</canvas>
-            <script>
-                const canvas = document.getElementById("demo-canvas");
-                const ctx = canvas.getContext("2d");
-                ctx.fillStyle = "gray";
-                ctx.fillRect(110, 25, 80, 80);
-                ctx.fillStyle = "black";
-                ctx.font = "16px sans-serif";
-                ctx.textAlign = "center";
-                ctx.fillText("Hello, canvas!", 150, 135);
-            </script>
-        </section>
-        <section>
-            <h2>Custom elem #2 - Hello World</h2>
-            <p>
-              the element below logs "Hello world!" to the browser console when it's added to the page
+            <h2>Project name</h2>
+            <p class="proj-desc">Project description</p>
+            <ul class="proj-tags">
+              <li><tool-tag>tag</tool-tag></li>
+            </ul>
+            <p class="proj-view-link">
+              <a href="projects.html"
+                >View project <span aria-hidden="true">&rarr;</span></a
+              >
             </p>
-            <hello-world></hello-world>
-            <script>
-                class HelloWorld extends HTMLElement {
-                    connectedCallback() {
-                        console.log("Hello World!");
-                    }
-                }
-                customElements.define("hello-world", HelloWorld);
-            </script>
-        </section>
+          </article>
+        </template>
+      </section>
+      <section>
+        <h2>Audio + Source</h2>
+        <p>This audio plays the sounds of ice being stepped on</p>
+        <audio controls>
+          <source src="media/ice-sound.mp3" type="audio/mpeg" />
+          Your browser does not support audio
+        </audio>
+      </section>
+      <section>
+        <h2>Video + Source</h2>
+        <p>This plays an asmr wax cracking video</p>
+        <video height="500" width="300" controls>
+          <source src="media/wax-cracking-video.mp4" type="video/mp4" />
+          Your browser does not support video
+        </video>
+      </section>
+      <section>
+        <h2>Canvas</h2>
+        <p>simple drawing made w/ canvas API</p>
+        <canvas id="demo-canvas" width="300" height="150" role="img"
+          >Your Browser doesn't support canvas</canvas
+        >
+        <script>
+          const canvas = document.getElementById("demo-canvas");
+          const ctx = canvas.getContext("2d");
+          ctx.fillStyle = "gray";
+          ctx.fillRect(110, 25, 80, 80);
+          ctx.fillStyle = "black";
+          ctx.font = "16px sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("Hello, canvas!", 150, 135);
+        </script>
+      </section>
+      <section>
+        <h2>Custom elem #2 - Hello World</h2>
+        <p>
+          the element below logs "Hello world!" to the browser console when it's
+          added to the page
+        </p>
+        <hello-world></hello-world>
+        <script>
+          class HelloWorld extends HTMLElement {
+            connectedCallback() {
+              console.log("Hello World!");
+            }
+          }
+          customElements.define("hello-world", HelloWorld);
+        </script>
+      </section>
+      <section>
+        <h2>MathML</h2>
+        <p>Einstein's mass-energy equivalence written in MathML:</p>
+        <math display="block">
+          <mi>E</mi>
+          <mo>=</mo>
+          <mi>m</mi>
+          <msup>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msup>
+        </math>
+        <p>
+          Developers couldn't rely on MathML because browser support was
+          inconsistent. Firefox and Safari supported it early on, but Chrome
+          only supported it briefly in version 24 before removing it. Since most
+          people use Chrome, most users couldn't see MathML rendered, leading
+          developers to use images or JavaScript libraries like MathJax instead.
+          This changed in January 2023, when Chrome 109 added MathML support
+          back, making it usable across all major browsers.
+        </p>
+        <p>
+          Source:
+          <a
+            href="https://caniuse.com/mathml"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Can I use: MathML</a
+          >
+        </p>
+      </section>
     </main>
     <footer>
       <ul>
@@ -187,5 +224,5 @@
       </ul>
       <p><small>&copy; 2026 Built by Christine Le</small></p>
     </footer>
-</body>
+  </body>
 </html>
